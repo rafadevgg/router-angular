@@ -8,7 +8,9 @@ import { RouterLink } from "@angular/router";
   templateUrl: './card-user.html',
   styleUrl: './card-user.scss',
 })
+
 export class CardUser {
-  @Input({required:true}) user: User = new User();
+  
+  @Input({ required: true }) user: User = new User();
 
 }

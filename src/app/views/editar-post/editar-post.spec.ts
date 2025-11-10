@@ -10,7 +10,7 @@ describe('EditarPost', () => {
     await TestBed.configureTestingModule({
       imports: [EditarPost]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(EditarPost);
     component = fixture.componentInstance;

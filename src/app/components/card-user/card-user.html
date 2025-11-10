@@ -1,9 +1,36 @@
-<div class="card">
+<div class="card h-100 shadow-sm border-0 hover-card">
+  <div class="card-header text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    <div class="d-flex align-items-center">
+      <div class="avatar-circle me-3">
+        <i class="bi bi-person-fill fs-3"></i>
+      </div>
+      <div>
+        <h5 class="mb-0">{{user.name}}</h5>
+        <small class="opacity-75">@{{user.username}}</small>
+      </div>
+    </div>
+  </div>
   <div class="card-body">
-    <h5 class="card-title">{{user.name}}</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">{{user.username}}</h6>
-    <p class="card-text m-0">Informações de contato</p>
-    <p class="card-text">Email: {{user.email}}; Fone: {{user.phone}}, Site: {{user.website}}</p>
-    <a [routerLink]="`/posts/${user.id}`" class="btn btn-primary">Ver posts</a>
+    <div class="mb-3">
+      <div class="info-item mb-2">
+        <i class="bi bi-envelope-fill text-primary me-2"></i>
+        <small class="text-muted">{{user.email}}</small>
+      </div>
+      <div class="info-item mb-2">
+        <i class="bi bi-telephone-fill text-success me-2"></i>
+        <small class="text-muted">{{user.phone}}</small>
+      </div>
+      <div class="info-item">
+        <i class="bi bi-globe text-info me-2"></i>
+        <small class="text-muted">{{user.website}}</small>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer bg-white border-0">
+    <a [routerLink]="`/posts/${user.id}`"
+      class="btn btn-primary w-100 d-flex align-items-center justify-content-center">
+      <i class="bi bi-file-text me-2"></i>
+      Ver Posts
+    </a>
   </div>
 </div>

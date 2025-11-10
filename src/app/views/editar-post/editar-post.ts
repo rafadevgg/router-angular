@@ -1,12 +1,12 @@
-import { Component, inject, Input, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { PostService } from '../../services/post-service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Post } from '../../shared/models/Post';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-editar-post',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './editar-post.html',
   styleUrl: './editar-post.scss',
 })
@@ -27,8 +27,11 @@ export class EditarPost implements OnInit {
 
   salvarPost() {
     this.postService.alterarPost(this.postEdicao).subscribe(
-      response => console.log('post atualizado', response)
+      response => {
+        console.log('Post atualizado com sucesso!', response);
+        alert('Post atualizado com sucesso!');
+      }
     )
-    this.router.navigate(['/']);
+    this.router.navigate(['/posts']);
   }
 }

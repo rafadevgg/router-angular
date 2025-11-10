@@ -8,6 +8,9 @@ import { Navbar } from "./components/navbar/navbar";
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
+
 export class App {
+  
   protected title = 'senai-http-router';
+
 }

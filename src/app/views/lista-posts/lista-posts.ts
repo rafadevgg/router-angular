@@ -1,6 +1,4 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { User } from '../../shared/models/User';
-import { CardUser } from '../../components/card-user/card-user';
 import { Post } from '../../shared/models/Post';
 import { PostService } from '../../services/post-service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -12,9 +10,9 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
   styleUrl: './lista-posts.scss',
 })
 export class ListaPosts implements OnInit {
-private postService = inject(PostService);
+  private postService = inject(PostService);
 
-private route = inject(ActivatedRoute);
+  private route = inject(ActivatedRoute);
 
   ngOnInit(): void {
     let idUser = this.route.snapshot.params['id'];
@@ -25,6 +23,6 @@ private route = inject(ActivatedRoute);
   }
 
   protected posts: Post[] = [];
-  
+
 
 }

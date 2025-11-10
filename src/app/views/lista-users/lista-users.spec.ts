@@ -10,7 +10,7 @@ describe('ListaUsers', () => {
     await TestBed.configureTestingModule({
       imports: [ListaUsers]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ListaUsers);
     component = fixture.componentInstance;

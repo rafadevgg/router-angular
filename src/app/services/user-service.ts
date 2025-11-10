@@ -6,7 +6,7 @@ import { User } from '../shared/models/User';
   providedIn: 'root',
 })
 export class UserService {
-  
+
   private http = inject(HttpClient);
 
   buscarUsers() {
