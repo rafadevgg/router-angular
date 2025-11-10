@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form (ngSubmit)="salvarPost()">
+              <div class="mb-3">
+                <label for="titulo" class="form-label">Titulo</label>
+                <input name="title" [(ngModel)]="postEdicao.title" type="text" class="form-control" id="titulo" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="body" class="form-label">Descrição</label>
+                <textarea [(ngModel)]="postEdicao.body" name="body" class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+        </div>
+    </div>
+</div>

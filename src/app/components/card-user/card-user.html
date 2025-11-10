@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{user.name}}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{user.username}}</h6>
+    <p class="card-text m-0">Informações de contato</p>
+    <p class="card-text">Email: {{user.email}}; Fone: {{user.phone}}, Site: {{user.website}}</p>
+    <a [routerLink]="`/posts/${user.id}`" class="btn btn-primary">Ver posts</a>
+  </div>
+</div>
